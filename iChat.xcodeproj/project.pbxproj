@@ -32,6 +32,10 @@
 		09043383291AD89000C84AAF /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 09043382291AD89000C84AAF /* waitingChats.json */; };
 		09043385291AD8AA00C84AAF /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09043384291AD8AA00C84AAF /* Bundle.swift */; };
 		09043388291AF5CA00C84AAF /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09043387291AF5CA00C84AAF /* ActiveChatCell.swift */; };
+		0904338A291AFF5200C84AAF /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09043389291AFF5200C84AAF /* GradientView.swift */; };
+		0904338C291B01BC00C84AAF /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904338B291B01BC00C84AAF /* WaitingChatCell.swift */; };
+		0904338E291B027400C84AAF /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904338D291B027400C84AAF /* SelfConfiguringCell.swift */; };
+		09043391291B041300C84AAF /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09043390291B041300C84AAF /* SectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		09043382291AD89000C84AAF /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		09043384291AD8AA00C84AAF /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		09043387291AF5CA00C84AAF /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
+		09043389291AFF5200C84AAF /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		0904338B291B01BC00C84AAF /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
+		0904338D291B027400C84AAF /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
+		09043390291B041300C84AAF /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 				0904334A29198E1F00C84AAF /* SceneDelegate.swift */,
 				09043379291AB89400C84AAF /* Controllers */,
 				09043378291AB70200C84AAF /* SignInAuth */,
+				0904338F291B029900C84AAF /* Protocols */,
 				0904336629199BB700C84AAF /* Extensions */,
 				0904335129198E2100C84AAF /* Assets.xcassets */,
 				0904335329198E2100C84AAF /* LaunchScreen.storyboard */,
@@ -109,6 +118,7 @@
 		0904336629199BB700C84AAF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				09043389291AFF5200C84AAF /* GradientView.swift */,
 				09043374291A970300C84AAF /* AddPhotoView.swift */,
 				09043384291AD8AA00C84AAF /* Bundle.swift */,
 				0904336829199EF500C84AAF /* ButtonFormView.swift */,
@@ -150,6 +160,7 @@
 			children = (
 				09043386291AF5BB00C84AAF /* cell */,
 				0904337A291AB8AF00C84AAF /* ListViewController.swift */,
+				09043390291B041300C84AAF /* SectionHeader.swift */,
 				0904337C291AB8E000C84AAF /* PeopleViewController.swift */,
 				0904337E291AB8FE00C84AAF /* MainTabbarController.swift */,
 			);
@@ -160,8 +171,17 @@
 			isa = PBXGroup;
 			children = (
 				09043387291AF5CA00C84AAF /* ActiveChatCell.swift */,
+				0904338B291B01BC00C84AAF /* WaitingChatCell.swift */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		0904338F291B029900C84AAF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0904338D291B027400C84AAF /* SelfConfiguringCell.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +258,8 @@
 			files = (
 				0904337B291AB8AF00C84AAF /* ListViewController.swift in Sources */,
 				0904337F291AB8FE00C84AAF /* MainTabbarController.swift in Sources */,
+				09043391291B041300C84AAF /* SectionHeader.swift in Sources */,
+				0904338A291AFF5200C84AAF /* GradientView.swift in Sources */,
 				09043377291AB18800C84AAF /* SegmentedControl+Extension.swift in Sources */,
 				0904336F291A865900C84AAF /* OneLineTextField.swift in Sources */,
 				09043388291AF5CA00C84AAF /* ActiveChatCell.swift in Sources */,
@@ -252,6 +274,8 @@
 				0904334929198E1F00C84AAF /* AppDelegate.swift in Sources */,
 				09043385291AD8AA00C84AAF /* Bundle.swift in Sources */,
 				09043363291998C500C84AAF /* UILabel+Extension.swift in Sources */,
+				0904338E291B027400C84AAF /* SelfConfiguringCell.swift in Sources */,
+				0904338C291B01BC00C84AAF /* WaitingChatCell.swift in Sources */,
 				090433612919970B00C84AAF /* UIColor+Extension.swift in Sources */,
 				0904335F2919965800C84AAF /* UIFont+Extension.swift in Sources */,
 				0904334B29198E1F00C84AAF /* SceneDelegate.swift in Sources */,
