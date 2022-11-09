@@ -46,6 +46,9 @@
 		09AA9A1D291C257C0018DC8C /* UIVuew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A1C291C257C0018DC8C /* UIVuew+Extension.swift */; };
 		09AA9A1F291C2C310018DC8C /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A1E291C2C310018DC8C /* ChatRequestViewController.swift */; };
 		09AA9A25291C4B6C0018DC8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09AA9A24291C4B6C0018DC8C /* GoogleService-Info.plist */; };
+		09AA9A28291C52A70018DC8C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A27291C52A70018DC8C /* AuthService.swift */; };
+		09AA9A2A291C579E0018DC8C /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A29291C579E0018DC8C /* Validators.swift */; };
+		09AA9A2D291C57FA0018DC8C /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A2C291C57FA0018DC8C /* AuthError.swift */; };
 		74D0FE69E646D9AD029C602B /* Pods_iChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B934F267AC9E799276DA768D /* Pods_iChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +94,9 @@
 		09AA9A1C291C257C0018DC8C /* UIVuew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVuew+Extension.swift"; sourceTree = "<group>"; };
 		09AA9A1E291C2C310018DC8C /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		09AA9A24291C4B6C0018DC8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		09AA9A27291C52A70018DC8C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		09AA9A29291C579E0018DC8C /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		09AA9A2C291C57FA0018DC8C /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		3702BCFCF24A796CC01BC248 /* Pods-iChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.release.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.release.xcconfig"; sourceTree = "<group>"; };
 		B3A06D165E43217DCCC276C7 /* Pods-iChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.debug.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.debug.xcconfig"; sourceTree = "<group>"; };
 		B934F267AC9E799276DA768D /* Pods_iChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,9 +136,10 @@
 			isa = PBXGroup;
 			children = (
 				09AA9A0D291BE1B10018DC8C /* users.json */,
+				09AA9A26291C52860018DC8C /* Services */,
 				0904334829198E1F00C84AAF /* AppDelegate.swift */,
 				0904334A29198E1F00C84AAF /* SceneDelegate.swift */,
-				09AA9A13291BE4E50018DC8C /* Models */,
+				09AA9A2B291C57D00018DC8C /* Helpers */,
 				09043379291AB89400C84AAF /* Controllers */,
 				09043378291AB70200C84AAF /* SignInAuth */,
 				0904338F291B029900C84AAF /* Protocols */,
@@ -229,6 +236,24 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		09AA9A26291C52860018DC8C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				09AA9A13291BE4E50018DC8C /* Models */,
+				09AA9A27291C52A70018DC8C /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		09AA9A2B291C57D00018DC8C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				09AA9A29291C579E0018DC8C /* Validators.swift */,
+				09AA9A2C291C57FA0018DC8C /* AuthError.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		390BBAA92579E0BE2EF7CB78 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,7 +268,6 @@
 				B3A06D165E43217DCCC276C7 /* Pods-iChat.debug.xcconfig */,
 				3702BCFCF24A796CC01BC248 /* Pods-iChat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -371,6 +395,7 @@
 				09043391291B041300C84AAF /* SectionHeader.swift in Sources */,
 				09AA9A17291BEB470018DC8C /* UIViewController+Extension.swift in Sources */,
 				0904338A291AFF5200C84AAF /* GradientView.swift in Sources */,
+				09AA9A2D291C57FA0018DC8C /* AuthError.swift in Sources */,
 				09043377291AB18800C84AAF /* SegmentedControl+Extension.swift in Sources */,
 				0904336F291A865900C84AAF /* OneLineTextField.swift in Sources */,
 				09AA9A10291BE4850018DC8C /* MUser.swift in Sources */,
@@ -396,7 +421,9 @@
 				0904335F2919965800C84AAF /* UIFont+Extension.swift in Sources */,
 				0904334B29198E1F00C84AAF /* SceneDelegate.swift in Sources */,
 				09043371291A8D4500C84AAF /* LoginViewController.swift in Sources */,
+				09AA9A28291C52A70018DC8C /* AuthService.swift in Sources */,
 				09AA9A1D291C257C0018DC8C /* UIVuew+Extension.swift in Sources */,
+				09AA9A2A291C579E0018DC8C /* Validators.swift in Sources */,
 				0904336B2919A3F100C84AAF /* StackView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
