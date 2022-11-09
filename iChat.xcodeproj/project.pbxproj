@@ -36,6 +36,11 @@
 		0904338C291B01BC00C84AAF /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904338B291B01BC00C84AAF /* WaitingChatCell.swift */; };
 		0904338E291B027400C84AAF /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904338D291B027400C84AAF /* SelfConfiguringCell.swift */; };
 		09043391291B041300C84AAF /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09043390291B041300C84AAF /* SectionHeader.swift */; };
+		09AA9A0E291BE1B10018DC8C /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 09AA9A0D291BE1B10018DC8C /* users.json */; };
+		09AA9A10291BE4850018DC8C /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A0F291BE4850018DC8C /* MUser.swift */; };
+		09AA9A12291BE4950018DC8C /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A11291BE4950018DC8C /* MChat.swift */; };
+		09AA9A15291BE9A70018DC8C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A14291BE9A70018DC8C /* UserCell.swift */; };
+		09AA9A17291BEB470018DC8C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A16291BEB470018DC8C /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +75,11 @@
 		0904338B291B01BC00C84AAF /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		0904338D291B027400C84AAF /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
 		09043390291B041300C84AAF /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		09AA9A0D291BE1B10018DC8C /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		09AA9A0F291BE4850018DC8C /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
+		09AA9A11291BE4950018DC8C /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
+		09AA9A14291BE9A70018DC8C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		09AA9A16291BEB470018DC8C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +112,10 @@
 		0904334729198E1F00C84AAF /* iChat */ = {
 			isa = PBXGroup;
 			children = (
+				09AA9A0D291BE1B10018DC8C /* users.json */,
 				0904334829198E1F00C84AAF /* AppDelegate.swift */,
 				0904334A29198E1F00C84AAF /* SceneDelegate.swift */,
+				09AA9A13291BE4E50018DC8C /* Models */,
 				09043379291AB89400C84AAF /* Controllers */,
 				09043378291AB70200C84AAF /* SignInAuth */,
 				0904338F291B029900C84AAF /* Protocols */,
@@ -133,6 +145,7 @@
 			children = (
 				0904336A2919A3F100C84AAF /* StackView+Extension.swift */,
 				0904335C291993D100C84AAF /* UIButton+Extension.swift */,
+				09AA9A16291BEB470018DC8C /* UIViewController+Extension.swift */,
 				0904336429199A3300C84AAF /* UIImageView+Extension.swift */,
 				09043376291AB18800C84AAF /* SegmentedControl+Extension.swift */,
 				0904335E2919965800C84AAF /* UIFont+Extension.swift */,
@@ -172,6 +185,7 @@
 			children = (
 				09043387291AF5CA00C84AAF /* ActiveChatCell.swift */,
 				0904338B291B01BC00C84AAF /* WaitingChatCell.swift */,
+				09AA9A14291BE9A70018DC8C /* UserCell.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -182,6 +196,15 @@
 				0904338D291B027400C84AAF /* SelfConfiguringCell.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		09AA9A13291BE4E50018DC8C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				09AA9A0F291BE4850018DC8C /* MUser.swift */,
+				09AA9A11291BE4950018DC8C /* MChat.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09AA9A0E291BE1B10018DC8C /* users.json in Resources */,
 				0904335529198E2100C84AAF /* LaunchScreen.storyboard in Resources */,
 				09043381291AD88700C84AAF /* activeChats.json in Resources */,
 				0904335229198E2100C84AAF /* Assets.xcassets in Resources */,
@@ -256,12 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09AA9A12291BE4950018DC8C /* MChat.swift in Sources */,
 				0904337B291AB8AF00C84AAF /* ListViewController.swift in Sources */,
 				0904337F291AB8FE00C84AAF /* MainTabbarController.swift in Sources */,
 				09043391291B041300C84AAF /* SectionHeader.swift in Sources */,
+				09AA9A17291BEB470018DC8C /* UIViewController+Extension.swift in Sources */,
 				0904338A291AFF5200C84AAF /* GradientView.swift in Sources */,
 				09043377291AB18800C84AAF /* SegmentedControl+Extension.swift in Sources */,
 				0904336F291A865900C84AAF /* OneLineTextField.swift in Sources */,
+				09AA9A10291BE4850018DC8C /* MUser.swift in Sources */,
 				09043388291AF5CA00C84AAF /* ActiveChatCell.swift in Sources */,
 				0904336D291A83D100C84AAF /* SignUpViewController.swift in Sources */,
 				0904334D29198E1F00C84AAF /* AuthViewController.swift in Sources */,
@@ -274,6 +301,7 @@
 				0904334929198E1F00C84AAF /* AppDelegate.swift in Sources */,
 				09043385291AD8AA00C84AAF /* Bundle.swift in Sources */,
 				09043363291998C500C84AAF /* UILabel+Extension.swift in Sources */,
+				09AA9A15291BE9A70018DC8C /* UserCell.swift in Sources */,
 				0904338E291B027400C84AAF /* SelfConfiguringCell.swift in Sources */,
 				0904338C291B01BC00C84AAF /* WaitingChatCell.swift in Sources */,
 				090433612919970B00C84AAF /* UIColor+Extension.swift in Sources */,
