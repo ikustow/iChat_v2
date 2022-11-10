@@ -49,6 +49,9 @@
 		09AA9A28291C52A70018DC8C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A27291C52A70018DC8C /* AuthService.swift */; };
 		09AA9A2A291C579E0018DC8C /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A29291C579E0018DC8C /* Validators.swift */; };
 		09AA9A2D291C57FA0018DC8C /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A2C291C57FA0018DC8C /* AuthError.swift */; };
+		09AA9A2F291D87EF0018DC8C /* AuthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A2E291D87EF0018DC8C /* AuthDelegate.swift */; };
+		09AA9A31291D8A620018DC8C /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A30291D8A620018DC8C /* FirestoreService.swift */; };
+		09AA9A33291D8CFA0018DC8C /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA9A32291D8CFA0018DC8C /* UserError.swift */; };
 		74D0FE69E646D9AD029C602B /* Pods_iChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B934F267AC9E799276DA768D /* Pods_iChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +100,9 @@
 		09AA9A27291C52A70018DC8C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		09AA9A29291C579E0018DC8C /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		09AA9A2C291C57FA0018DC8C /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		09AA9A2E291D87EF0018DC8C /* AuthDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDelegate.swift; sourceTree = "<group>"; };
+		09AA9A30291D8A620018DC8C /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		09AA9A32291D8CFA0018DC8C /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		3702BCFCF24A796CC01BC248 /* Pods-iChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.release.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.release.xcconfig"; sourceTree = "<group>"; };
 		B3A06D165E43217DCCC276C7 /* Pods-iChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.debug.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.debug.xcconfig"; sourceTree = "<group>"; };
 		B934F267AC9E799276DA768D /* Pods_iChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				0904338D291B027400C84AAF /* SelfConfiguringCell.swift */,
+				09AA9A2E291D87EF0018DC8C /* AuthDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -241,6 +248,7 @@
 			children = (
 				09AA9A13291BE4E50018DC8C /* Models */,
 				09AA9A27291C52A70018DC8C /* AuthService.swift */,
+				09AA9A30291D8A620018DC8C /* FirestoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -249,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				09AA9A29291C579E0018DC8C /* Validators.swift */,
+				09AA9A32291D8CFA0018DC8C /* UserError.swift */,
 				09AA9A2C291C57FA0018DC8C /* AuthError.swift */,
 			);
 			path = Helpers;
@@ -404,12 +413,15 @@
 				0904336D291A83D100C84AAF /* SignUpViewController.swift in Sources */,
 				0904334D29198E1F00C84AAF /* AuthViewController.swift in Sources */,
 				09AA9A19291C1FFE0018DC8C /* ProfileViewController.swift in Sources */,
+				09AA9A31291D8A620018DC8C /* FirestoreService.swift in Sources */,
 				0904337D291AB8E000C84AAF /* PeopleViewController.swift in Sources */,
 				09AA9A1F291C2C310018DC8C /* ChatRequestViewController.swift in Sources */,
 				0904335D291993D100C84AAF /* UIButton+Extension.swift in Sources */,
+				09AA9A2F291D87EF0018DC8C /* AuthDelegate.swift in Sources */,
 				09043373291A93AD00C84AAF /* SetupProfileViewController.swift in Sources */,
 				0904336529199A3300C84AAF /* UIImageView+Extension.swift in Sources */,
 				0904336929199EF500C84AAF /* ButtonFormView.swift in Sources */,
+				09AA9A33291D8CFA0018DC8C /* UserError.swift in Sources */,
 				09043375291A970300C84AAF /* AddPhotoView.swift in Sources */,
 				0904334929198E1F00C84AAF /* AppDelegate.swift in Sources */,
 				09043385291AD8AA00C84AAF /* Bundle.swift in Sources */,
