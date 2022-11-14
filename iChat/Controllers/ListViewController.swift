@@ -32,19 +32,18 @@ class ListViewController: UIViewController {
     
     var dataSource: UICollectionViewDiffableDataSource<Section, MChat>?
     var collectionView: UICollectionView!
-
-    private let currentUser: MUser
     
-    init(currentUser: MUser) {
-        self.currentUser = currentUser
-        super.init(nibName: nil, bundle: nil)
-        title = currentUser.username
-    }
+    private let currentUser: MUser
+       
+       init(currentUser: MUser) {
+           self.currentUser = currentUser
+           super.init(nibName: nil, bundle: nil)
+           title = currentUser.username
+       }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     deinit {
         waitingChatsListener?.remove()
@@ -83,7 +82,6 @@ class ListViewController: UIViewController {
                 self.showAlert(with: "Ошибка!", and: error.localizedDescription)
             }
         })
-
     }
     
     private func setupSearchBar() {
@@ -107,8 +105,8 @@ class ListViewController: UIViewController {
         
         collectionView.register(ActiveChatCell.self, forCellWithReuseIdentifier: ActiveChatCell.reuseId)
         collectionView.register(WaitingChatCell.self, forCellWithReuseIdentifier: WaitingChatCell.reuseId)
-        collectionView.delegate =  self
         
+        collectionView.delegate = self
     }
     
     private func reloadData() {
@@ -126,7 +124,6 @@ class ListViewController: UIViewController {
 // MARK: - Data Source
 extension ListViewController {
     
-       
     private func createDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, MChat>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, chat) -> UICollectionViewCell? in
             guard let section = Section(rawValue: indexPath.section) else {
@@ -137,7 +134,7 @@ extension ListViewController {
             case .activeChats:
                 return self.configure(collectionView: collectionView, cellType: ActiveChatCell.self, with: chat, for: indexPath)
             case .waitingChats:
-                return self.configure(collectionView: collectionView, cellType: WaitingChatCell.self, with: chat, for: indexPath)
+                 return self.configure(collectionView: collectionView, cellType: WaitingChatCell.self, with: chat, for: indexPath)
             }
         })
         

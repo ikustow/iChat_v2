@@ -50,7 +50,6 @@ class ListenerService {
         return usersListener
     } // usersObserve
     
-    
     func waitingChatsObserve(chats: [MChat], completion: @escaping (Result<[MChat], Error>) -> Void) -> ListenerRegistration? {
         var chats = chats
         let chatsRef = db.collection(["users", currentUserId, "waitingChats"].joined(separator: "/"))
@@ -134,4 +133,3 @@ class ListenerService {
         return messagesListener
     }
 }
-

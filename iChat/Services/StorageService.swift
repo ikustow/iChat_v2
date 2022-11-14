@@ -11,6 +11,10 @@ import FirebaseStorage
 
 class StorageService {
     
+    private var chatsRef: StorageReference {
+        return storageRef.child("chats")
+    }
+    
     static let shared = StorageService()
 
     let storageRef = Storage.storage().reference()

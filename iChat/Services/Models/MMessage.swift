@@ -68,4 +68,3 @@ extension MMessage: Comparable {
         return lhs.sentDate < rhs.sentDate
     }
 }
-
